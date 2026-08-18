@@ -454,7 +454,7 @@ export function BrandCarouselSection() {
               "
             >
               <span>
-                Click carousel to view all brand partners
+                Click here to view all brand partners
               </span>
 
               <span>
