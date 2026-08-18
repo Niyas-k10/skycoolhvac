@@ -457,9 +457,9 @@ export function BrandCarouselSection() {
                 Click here to view all brand partners
               </span>
 
-              <span>
+              {/* <span>
                 →
-              </span>
+              </span> */}
             </span>
           </div>
         </div>
