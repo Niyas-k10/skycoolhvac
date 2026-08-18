@@ -342,10 +342,9 @@ export function Hero() {
         className="
           absolute
 
-          bottom-5
-          sm:bottom-6
-          md:bottom-7
-          lg:bottom-8
+          bottom-4
+          sm:bottom-5
+          md:bottom-6
 
           left-1/2
           -translate-x-1/2
