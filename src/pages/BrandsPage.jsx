@@ -12,7 +12,7 @@ const AVAILABLE_BRANDS = [
 const BRAND_IMAGES = AVAILABLE_BRANDS.map((num) => ({
   id: `brand-full-${num}`,
   number: num,
-  image: `/brands/${num}.jpg`
+  image: `/brands/${num}.webp`
 }));
 
 export function BrandsPage() {

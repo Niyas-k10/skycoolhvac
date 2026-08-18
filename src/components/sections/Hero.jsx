@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const SLIDES = [
   {
     id: 1,
-    image: '/hero/hero1.png',
+    image: '/hero/hero1.webp',
     alt: 'AC spare parts supplier in Dubai',
     label: 'PREMIUM HVAC SOLUTIONS',
     headingWhite: 'AC SPARE PARTS',
@@ -13,7 +13,7 @@ const SLIDES = [
   },
   {
     id: 2,
-    image: '/hero/hero2.png',
+    image: '/hero/hero2.webp',
     alt: 'HVAC equipment and spare parts in Dubai',
     label: 'GENUINE AC COMPONENTS',
     headingWhite: 'QUALITY PARTS',
@@ -23,7 +23,7 @@ const SLIDES = [
   },
   {
     id: 3,
-    image: '/hero/hero3.png',
+    image: '/hero/hero3.webp',
     alt: 'AC components and spare parts',
     label: 'DUBAI HVAC TRADING',
     headingWhite: 'YOUR AC PARTS',
@@ -139,6 +139,9 @@ export function Hero() {
               <img
                 src={slide.image}
                 alt={slide.alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'low'}
+                decoding="async"
                 className="
                   absolute
                   inset-0

@@ -1,16 +1,16 @@
 const CATEGORY_IMAGES = {
-  'ac-spare-parts': '/products/AC.png',
-  'compressors': '/products/Compressor.png',
-  'fan-motors': '/products/Motor.png',
-  'thermostats': '/products/Thermostat.png',
-  'ac-remote-controls': '/products/AC.png',
-  'ac-tools': '/products/Acutator.png',
-  'refrigerants': '/products/Gas.png',
-  'hvac-components': '/products/Coil.png'
+  'ac-spare-parts': '/products/AC.webp',
+  'compressors': '/products/Compressor.webp',
+  'fan-motors': '/products/Motor.webp',
+  'thermostats': '/products/Thermostat.webp',
+  'ac-remote-controls': '/products/AC.webp',
+  'ac-tools': '/products/Acutator.webp',
+  'refrigerants': '/products/Gas.webp',
+  'hvac-components': '/products/Coil.webp'
 };
 
 export function ProductImageFallback({ categorySlug, name, brand, className = '' }) {
-  const imageSrc = CATEGORY_IMAGES[categorySlug] || '/products/AC.png';
+  const imageSrc = CATEGORY_IMAGES[categorySlug] || '/products/AC.webp';
 
   return (
     <div className={`w-full h-full bg-slate-50 flex items-center justify-center p-4 text-center relative overflow-hidden border border-slate-100 ${className}`}>

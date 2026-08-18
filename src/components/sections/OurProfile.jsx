@@ -29,8 +29,10 @@ export function OurProfile() {
             BACKGROUND IMAGE
         ========================================= */}
         <img
-          src="/profile/profile.png"
+          src="/profile/profile.webp"
           alt="Sky Cool HVAC Trading LLC Dubai skyline"
+          loading="lazy"
+          decoding="async"
           className="
             absolute
             inset-0

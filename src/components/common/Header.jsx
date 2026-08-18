@@ -94,8 +94,11 @@ export function Header() {
           >
             <div className="flex items-center justify-center gap-0 sm:gap-0">
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Sky Cool HVAC Trading LLC Logo"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="h-12 sm:h-14 w-auto max-w-[240px] sm:max-w-[280px] object-contain"
               />
               <div className="flex flex-col items-start justify-center whitespace-nowrap">

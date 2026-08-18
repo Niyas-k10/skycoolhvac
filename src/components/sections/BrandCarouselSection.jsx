@@ -28,7 +28,7 @@ const AVAILABLE_BRANDS = [
 const BRAND_ITEMS = AVAILABLE_BRANDS.map((num, i) => ({
   id: `brand-${num}`,
   originalIndex: i,
-  image: `/brands/${num}.jpg`
+  image: `/brands/${num}.webp`
 }));
 
 // Triple the list to create a seamless infinite track
