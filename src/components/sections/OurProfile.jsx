@@ -17,12 +17,12 @@ export function OurProfile() {
           relative
           w-full
           overflow-hidden
-          min-h-[600px]
-          sm:min-h-[560px]
-          md:min-h-[540px]
-          lg:aspect-3/1
+          min-h-[480px]
+          sm:min-h-[500px]
+          md:min-h-[520px]
           lg:min-h-0
-          xl:aspect-3/1
+          lg:aspect-[2.67/1]
+          xl:aspect-[2.67/1]
         "
       >
         {/* =========================================
@@ -39,11 +39,7 @@ export function OurProfile() {
             w-full
             h-full
             object-cover
-            object-[center_bottom]
-            sm:object-[center_bottom]
-            md:object-[center_bottom]
-            lg:object-center
-            xl:object-center
+            object-center
             block
             select-none
             pointer-events-none
@@ -70,7 +66,7 @@ export function OurProfile() {
         />
 
         {/* =========================================
-            CONTENT OVER IMAGE
+            CONTENT OVER IMAGE (CENTERED VERTICALLY & HORIZONTALLY)
         ========================================= */}
         <div
           className="
@@ -80,7 +76,7 @@ export function OurProfile() {
             z-10
 
             flex
-            items-start
+            items-center
             justify-center
 
             w-full
@@ -91,6 +87,9 @@ export function OurProfile() {
             md:px-10
             lg:px-14
             xl:px-20
+            py-8
+            sm:py-10
+            md:py-12
           "
         >
           {/* =========================================
@@ -100,11 +99,11 @@ export function OurProfile() {
             className="
               w-full
 
-              max-w-[340px]
-              sm:max-w-[500px]
-              md:max-w-[680px]
-              lg:max-w-[820px]
-              xl:max-w-[950px]
+              max-w-[300px]
+              sm:max-w-[440px]
+              md:max-w-[540px]
+              lg:max-w-[640px]
+              xl:max-w-[720px]
 
               mx-auto
 
@@ -113,16 +112,10 @@ export function OurProfile() {
               flex
               flex-col
               items-center
-              pt-18
-              sm:pt-14
-              md:pt-12
-              lg:pt-6
-              xl:pt-8
             "
           >
             {/* =========================================
                 OUR PROFILE HEADING
-                SAME STYLE AS FAQ HEADING
             ========================================= */}
             <div
               className="
@@ -164,7 +157,7 @@ export function OurProfile() {
               {/* =====================================
                   OUR PROFILE HEADING
               ===================================== */}
-              <span
+              <h2
                 className="
                   text-base
                   sm:text-lg
@@ -188,7 +181,7 @@ export function OurProfile() {
                 "
               >
                 OUR PROFILE
-              </span>
+              </h2>
 
               {/* =====================================
                   RIGHT BLUE LINE
@@ -220,11 +213,11 @@ export function OurProfile() {
               className="
                 w-full
 
-                max-w-[325px]
-                sm:max-w-[480px]
-                md:max-w-[620px]
-                lg:max-w-[760px]
-                xl:max-w-[900px]
+                max-w-[280px]
+                sm:max-w-[420px]
+                md:max-w-[500px]
+                lg:max-w-[600px]
+                xl:max-w-[660px]
 
                 mx-auto
 
