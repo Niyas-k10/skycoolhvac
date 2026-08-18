@@ -17,9 +17,9 @@ export function OurProfile() {
           relative
           w-full
           overflow-hidden
-          min-h-[500px]
-          sm:min-h-[520px]
-          md:min-h-[560px]
+          min-h-[600px]
+          sm:min-h-[560px]
+          md:min-h-[540px]
           lg:aspect-3/1
           lg:min-h-0
           xl:aspect-3/1
@@ -113,11 +113,11 @@ export function OurProfile() {
               flex
               flex-col
               items-center
-              pt-[10%]
-              sm:pt-[8%]
-              md:pt-[6%]
-              lg:pt-[3%]
-              xl:pt-[3.5%]
+              pt-18
+              sm:pt-14
+              md:pt-12
+              lg:pt-6
+              xl:pt-8
             "
           >
             {/* =========================================
