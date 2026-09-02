@@ -5,14 +5,15 @@ import { ArrowLeft, MessageSquare } from 'lucide-react';
 import { useWhatsAppLink } from '../hooks/useWhatsAppLink.js';
 
 const AVAILABLE_BRANDS = [
-  'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8', 'b9', 'b10',
-  'b11', 'b12', 'b13', 'b14', 'b15', 'b17', 'b18', 'b20', 'b21', 'b23', 'b24'
+  'b1', 'b2', 'b3', 'b4', 'b6', 'b7', 'b8', 'b9', 'b10',
+  'b11', 'b12', 'b13', 'b14', 'b15', 'b17', 'b18', 'b20', 'b21', 'b23', 'b24',
+  'b25', 'b26', 'b27'
 ];
 
 const BRAND_IMAGES = AVAILABLE_BRANDS.map((num) => ({
   id: `brand-full-${num}`,
   number: num,
-  image: `/brands/${num}.webp`
+  image: `/brands/${num}.${['b25', 'b26', 'b27'].includes(num) ? 'png' : 'webp'}`
 }));
 
 export function BrandsPage() {

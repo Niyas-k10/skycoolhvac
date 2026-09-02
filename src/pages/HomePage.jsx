@@ -6,7 +6,6 @@ import { OurProfile } from '../components/sections/OurProfile.jsx';
 import { ProductCatalogSection } from '../components/sections/ProductCatalogSection.jsx';
 import { BrandCarouselSection } from '../components/sections/BrandCarouselSection.jsx';
 import { WhyChooseUs } from '../components/sections/WhyChooseUs.jsx';
-import { Testimonials } from '../components/sections/Testimonials.jsx';
 import { FAQSection } from '../components/sections/FAQSection.jsx';
 import { ContactSection } from '../components/sections/ContactSection.jsx';
 import { getHVACBusinessSchema } from '../utils/seoHelpers.js';
@@ -50,10 +49,7 @@ export function HomePage() {
       {/* 5. WHY CHOOSE US? */}
       <WhyChooseUs />
 
-      {/* 6. WHAT OUR CLIENTS SAY */}
-      <Testimonials />
-
-      {/* 7. FAQ */}
+      {/* 6. FAQ */}
       <FAQSection />
 
       {/* 8. CONTACT US / WHATSAPP ENQUIRY SECTION */}

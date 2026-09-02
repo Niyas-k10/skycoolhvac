@@ -1,108 +1,66 @@
-import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, MessageSquare, ChevronDown, ChevronUp, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { CATEGORIES } from '../data/categories.js';
 import { SEOHead } from '../components/common/SEOHead.jsx';
-import { useWhatsAppLink } from '../hooks/useWhatsAppLink.js';
 import { getBreadcrumbSchema } from '../utils/seoHelpers.js';
 
 const CATEGORY_SEO = {
   ac: {
-    title: 'AC Spare Parts & Air Conditioning Units in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Explore split AC units and air conditioning components supplied by Sky Cool HVAC Trading LLC in Dubai and across the UAE.'
+    title: 'Air Conditioner Supplier in Dubai | Sky Cool HVAC Trading LLC',
+    description: 'All types of air conditioners are available to meet your residential, commercial, and professional cooling requirements. Contact Sky Cool HVAC Trading LLC in Dubai.'
   },
   actuator: {
-    title: 'HVAC Actuators Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Browse precision electric damper actuators, spring-return actuators, and valve controls supplied by Sky Cool HVAC Trading LLC in Dubai, UAE.'
+    title: 'Actuator With Valve Supplier in Dubai | Sky Cool HVAC Trading LLC',
+    description: 'All types of Actuactor with valve are available. Contact Sky Cool HVAC Trading LLC in Dubai, UAE for expert assistance.'
   },
   capacitor: {
     title: 'HVAC Capacitors Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Quality CBB65 dual run capacitors and AC motor start capacitors supplied by Sky Cool HVAC Trading LLC across Dubai and the UAE.'
+    description: 'All types of Capacitors are available. Contact Sky Cool HVAC Trading LLC in Dubai for run and start capacitor enquiries.'
   },
   coil: {
     title: 'Cooling & Evaporator Coils Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Indoor evaporator coils, soft copper pancake coils, and heat exchangers supplied by Sky Cool HVAC Trading LLC in Dubai and the UAE.'
+    description: 'All types of Coils are available. Contact Sky Cool HVAC Trading LLC in Dubai for cooling and evaporator coil enquiries.'
   },
   compressor: {
     title: 'AC Compressors Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Genuine rotary, scroll, and reciprocating AC compressors for residential and commercial cooling supplied by Sky Cool HVAC Trading LLC in Dubai.'
+    description: 'All types of Compressors are available. Contact Sky Cool HVAC Trading LLC in Dubai for rotary, scroll, and reciprocating compressors.'
   },
   copper: {
-    title: 'Copper Refrigeration Components in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'ASTM ACR copper tubing, long turn elbows, and refrigeration copper fittings supplied by Sky Cool HVAC Trading LLC in Dubai, UAE.'
+    title: 'Copper Fittings Supplier in Dubai | Sky Cool HVAC Trading LLC',
+    description: 'All types of Copper Fittings are available. Contact Sky Cool HVAC Trading LLC in Dubai for refrigeration copper fitting enquiries.'
   },
   'duct-materials': {
     title: 'HVAC Duct Materials & Accessories in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Aluminium duct tape, flexible PVC ducts, pre-insulated phenolic sheets, and canvas cloth supplied by Sky Cool HVAC Trading LLC in Dubai.'
+    description: 'All types of Duct Materials are available. Contact Sky Cool HVAC Trading LLC in Dubai for ducting and ventilation materials.'
   },
   gas: {
     title: 'Refrigerant Gas Cylinders Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'R410A, R22, R134a, and R404A refrigerant gas cylinders supplied for AC servicing and cooling maintenance in Dubai and the UAE.'
+    description: 'All types of Gases are available. Contact Sky Cool HVAC Trading LLC in Dubai for refrigerant gas cylinder enquiries.'
   },
   motor: {
     title: 'AC Motors & Fan Motors Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Outdoor condenser fan motors, indoor FCU blower motors, and air cooler motors supplied by Sky Cool HVAC Trading LLC in Dubai, UAE.'
+    description: 'All types of Motors are available. Contact Sky Cool HVAC Trading LLC in Dubai for fan motors and blower motors.'
   },
-  thermostat: {
-    title: 'HVAC Thermostats Supplier in Dubai | Sky Cool HVAC Trading LLC',
-    description: 'Honeywell digital room thermostats and FCU wall controllers supplied by Sky Cool HVAC Trading LLC in Dubai and the UAE.'
+  'fan-blade': {
+    title: 'Fan Blade Supplier in Dubai | Sky Cool HVAC Trading LLC',
+    description: 'All types of Fan Blades are available. Contact Sky Cool HVAC Trading LLC in Dubai for HVAC fan blades and propellers.'
+  },
+  blowers: {
+    title: 'Blowers Supplier in Dubai | Sky Cool HVAC Trading LLC',
+    description: 'All types of Blowers are available. Contact Sky Cool HVAC Trading LLC in Dubai for HVAC ventilation blowers.'
   }
 };
 
 function ProductCard({ product }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const { getProductWhatsAppUrl } = useWhatsAppLink();
-
   return (
-<div className="rounded-2xl border border-slate-200 bg-white/80 p-6 flex flex-col justify-between shadow-[0_2px_10px_rgba(15,23,42,0.06)] hover:border-[#2563EB]/40 hover:shadow-[0_10px_30px_rgba(15,23,42,0.10)] transition-all duration-300 group">      <div className="space-y-4">
-        {/* Product Image Frame */}
-        <div className="w-full h-60 rounded-xl bg-slate-50 p-1 flex items-center justify-center overflow-hidden border border-slate-100 bg-white">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="max-w-full max-h-full object-contain transform transition-transform duration-400 group-hover:scale-110"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Product Title */}
-        <h3 className="font-extrabold text-slate-900 text-lg sm:text-xl group-hover:text-[#2563EB] transition-colors leading-snug">
-          {product.name}
-        </h3>
-
-        {/* Expandable Product Description */}
-        <div className="space-y-2 text-slate-600 text-sm leading-relaxed">
-          <p>
-            {isExpanded ? product.fullDescription : product.shortDescription}
-          </p>
-
-          <button
-            type="button"
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center gap-1 text-xs font-bold text-[#2563EB] hover:text-blue-700 transition-colors focus:outline-none cursor-pointer pt-1"
-          >
-            <span>{isExpanded ? 'View Less' : 'View More'}</span>
-            {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Card Footer: Stock Badge & WhatsApp Enquiry CTA */}
-      <div className="pt-5 border-t border-slate-100 mt-5 space-y-3">
-        {/* <div className="flex items-center gap-1.5 text-xs text-emerald-600 font-medium">
-          <CheckCircle2 className="w-4 h-4 shrink-0" />
-          <span>Dubai Warehouse Ready Stock</span>
-        </div> */}
-
-        <a
-          href={getProductWhatsAppUrl(product.name)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full py-3 px-4 bg-[#2563EB] hover:bg-blue-700 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-md shadow-blue-600/20 transition-all hover:scale-[1.01]"
-        >
-          <MessageSquare className="w-4 h-4" />
-          <span>Enquire on WhatsApp</span>
-        </a>
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 flex items-center justify-center shadow-xs hover:border-[#2563EB]/40 hover:shadow-lg transition-all duration-300 group overflow-hidden">
+      <div className="w-full aspect-square sm:aspect-4/3 rounded-xl bg-slate-50/50 p-3 flex items-center justify-center overflow-hidden border border-slate-100/80">
+        <img
+          src={product.image}
+          alt=""
+          className="max-w-full max-h-full object-contain transform transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
       </div>
     </div>
   );
@@ -174,18 +132,15 @@ export function CategoryPage() {
           </div>
         </div>
 
-        {/* 6 Reference Products Cards Grid */}
+        {/* Reference Products Cards Grid */}
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl sm:text-2xl font-extrabold text-[#0F172A]">
               Available {category.name} Products
             </h2>
-            {/* <span className="text-xs font-semibold text-slate-500">
-              Showing 6 Reference Items
-            </span> */}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {category.products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

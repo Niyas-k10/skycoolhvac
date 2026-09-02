@@ -6,7 +6,6 @@ const AVAILABLE_BRANDS = [
   'b2',
   'b3',
   'b4',
-  'b5',
   'b6',
   'b7',
   'b8',
@@ -22,13 +21,16 @@ const AVAILABLE_BRANDS = [
   'b20',
   'b21',
   'b23',
-  'b24'
+  'b24',
+  'b25',
+  'b26',
+  'b27'
 ];
 
 const BRAND_ITEMS = AVAILABLE_BRANDS.map((num, i) => ({
   id: `brand-${num}`,
   originalIndex: i,
-  image: `/brands/${num}.webp`
+  image: `/brands/${num}.${['b25', 'b26', 'b27'].includes(num) ? 'png' : 'webp'}`
 }));
 
 // Triple the list to create a seamless infinite track

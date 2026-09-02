@@ -92,21 +92,26 @@ export function Header() {
             aria-label="Sky Cool HVAC Trading LLC Home"
             className="inline-flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-xl p-1 transition-opacity hover:opacity-95"
           >
-            <div className="flex items-center justify-center gap-0 sm:gap-0">
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3">
               <img
                 src="/images/logo.webp"
                 alt="Sky Cool HVAC Trading LLC Logo"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="h-12 sm:h-14 w-auto max-w-[240px] sm:max-w-[280px] object-contain"
+                className="h-11 sm:h-13 w-auto max-w-[240px] sm:max-w-[280px] object-contain"
               />
               <div className="flex flex-col items-start justify-center whitespace-nowrap">
                 <span
-                  className={`block text-[18px] sm:text-[21px] font-extrabold tracking-[0.02em] leading-none cursor-pointer select-none transition-[opacity,text-shadow] duration-500 ease-out ${
-                    isHomeActive ? 'text-slate-950 opacity-75' : 'text-slate-950 opacity-100'
-                  }`}
-                  style={{ fontFamily: 'Manrope, Arial, sans-serif' }}
+                  className="block text-[18px] sm:text-[21px] font-extrabold tracking-[0.02em] leading-none select-none"
+                  style={{
+                    fontFamily: 'Manrope, Arial, sans-serif',
+                    backgroundImage: 'linear-gradient(90deg, #062A63 0%, #007BFF 50%, #38BDF8 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    color: 'transparent'
+                  }}
                 >
                   SKY COOL
                 </span>
