@@ -41,12 +41,7 @@ export const CATEGORIES = [
       { id: "dct-9", image: "/products/Dct9.webp" },
       { id: "dct-10", image: "/products/Dct10.webp" },
       { id: "dct-11", image: "/products/Dct11.webp" },
-      { id: "dct-12", image: "/products/Dct12.webp" },
-      { id: "dct-13", image: "/products/Dct13.webp" },
-      { id: "dct-14", image: "/products/Dct14.webp" },
-      { id: "dct-15", image: "/products/Dct15.webp" },
       { id: "dct-16", image: "/products/Dct16.webp" },
-      { id: "dct-17", image: "/products/Dct17.webp" },
       { id: "dct-18", image: "/products/Dct18.webp" },
       { id: "dct-19", image: "/products/Dct19.webp" },
       { id: "dct-20", image: "/products/Dct20.webp" },
@@ -161,10 +156,11 @@ export const CATEGORIES = [
     image: "/products/Coil.webp",
     subtitle: "Cooling & Evaporator Coils",
     shortDescription: "All types of Coils for HVAC evaporator and heat exchange applications.",
-    longDescription: "All types of Coils are available. For further enquiries or expert assistance, please contact our team.",
+    longDescription: "All types of Coils and Straight pipes are available. For further enquiries or expert assistance, please contact our team.",
     products: [
       { id: "coil-1", image: "/products/coil1.webp" },
-      { id: "coi-1", image: "/products/coi1.webp" }
+      { id: "coi-1", image: "/products/coi1.webp" },
+      { id: "coi-2", name: "Straight Pipe", image: "/products/coi2.webp" }
     ]
   },
   {
@@ -184,12 +180,58 @@ export const CATEGORIES = [
       { id: "cop-6", image: "/products/cop6.webp" },
       { id: "cpr-1", image: "/products/cpr1.webp" },
       { id: "cpr-2", image: "/products/cpr2.webp" },
-      { id: "cpr-3", image: "/products/cpr3.webp" },
       { id: "cpr-4", image: "/products/cpr4.webp" },
       { id: "cpr-5", image: "/products/cpr5.webp" },
       { id: "cpr-6", image: "/products/cpr6.webp" },
       { id: "cpr-7", image: "/products/cpr7.webp" },
       { id: "cpr-8", image: "/products/cpr8.webp" }
+    ]
+  },
+  {
+    id: "thermostat",
+    slug: "thermostat",
+    name: "Thermostat",
+    image: "/products/Thermostat.png",
+    subtitle: "Reliable Temperature Control for HVAC Systems",
+    shortDescription: "All types of Thermostats are available. For further enquiries or expert assistance, please contact our team.",
+    longDescription: "All types of Thermostats are available. For further enquiries or expert assistance, please contact our team.",
+    products: [
+      { id: "therm-1", image: "/products/therm1.png" },
+      { id: "therm-2", image: "/products/therm2.png" },
+      { id: "therm-3", image: "/products/therm3.png" },
+      { id: "therm-4", image: "/products/therm4.png" },
+      { id: "therm-5", image: "/products/therm5.png" },
+      { id: "therm-6", image: "/products/therm6.png" },
+      { id: "thermos-1", image: "/products/thermos1.jpg" },
+      { id: "thermos-2", image: "/products/thermos2.jpg" },
+      { id: "thermos-3", image: "/products/thermos3.jpg" }
+    ]
+  },
+  {
+    id: "actuator",
+    slug: "actuator",
+    name: "Actuator With Valve",
+    image: "/products/Acutator.webp",
+    subtitle: "HVAC Electric Actuators & Valve Controls",
+    shortDescription: "All types of Actuactor with valve for HVAC control systems.",
+    longDescription: "All types of Actuactor with valve are available. For further enquiries or expert assistance, please contact our team.",
+    products: [
+      { id: "act-1", image: "/products/Actu1.webp" },
+      { id: "act-2", image: "/products/actu2.webp" },
+      { id: "act-3", image: "/products/actu3.webp" },
+      { id: "act-4", image: "/products/actu4.webp" },
+      { id: "act-5", image: "/products/actu5.webp" },
+      { id: "act-6", image: "/products/actu6.webp" },
+      { id: "actr-1", image: "/products/actr1.webp" },
+      { id: "actr-2", image: "/products/actr2.webp" },
+      { id: "actr-3", image: "/products/actr3.webp" },
+      { id: "actr-4", image: "/products/actr4.webp" },
+      { id: "actr-5", image: "/products/actr5.webp" },
+      { id: "actr-6", image: "/products/actr6.webp" },
+      { id: "actr-7", image: "/products/actr7.webp" },
+      { id: "actr-8", image: "/products/actr8.webp" },
+      { id: "actr-9", image: "/products/actr9.webp" },
+      { id: "actr-10", image: "/products/actr10.webp" }
     ]
   },
   {
@@ -232,33 +274,6 @@ export const CATEGORIES = [
       { id: "blo-6", image: "/products/blo6.webp" },
       { id: "blo-7", image: "/products/blo7.webp" },
       { id: "blo-8", image: "/products/blo8.webp" }
-    ]
-  },
-  {
-    id: "actuator",
-    slug: "actuator",
-    name: "Actuator With Valve",
-    image: "/products/Acutator.webp",
-    subtitle: "HVAC Electric Actuators & Valve Controls",
-    shortDescription: "All types of Actuactor with valve for HVAC control systems.",
-    longDescription: "All types of Actuactor with valve are available. For further enquiries or expert assistance, please contact our team.",
-    products: [
-      { id: "act-1", image: "/products/Actu1.webp" },
-      { id: "act-2", image: "/products/actu2.webp" },
-      { id: "act-3", image: "/products/actu3.webp" },
-      { id: "act-4", image: "/products/actu4.webp" },
-      { id: "act-5", image: "/products/actu5.webp" },
-      { id: "act-6", image: "/products/actu6.webp" },
-      { id: "actr-1", image: "/products/actr1.webp" },
-      { id: "actr-2", image: "/products/actr2.webp" },
-      { id: "actr-3", image: "/products/actr3.webp" },
-      { id: "actr-4", image: "/products/actr4.webp" },
-      { id: "actr-5", image: "/products/actr5.webp" },
-      { id: "actr-6", image: "/products/actr6.webp" },
-      { id: "actr-7", image: "/products/actr7.webp" },
-      { id: "actr-8", image: "/products/actr8.webp" },
-      { id: "actr-9", image: "/products/actr9.webp" },
-      { id: "actr-10", image: "/products/actr10.webp" }
     ]
   }
 ];

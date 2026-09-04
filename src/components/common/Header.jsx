@@ -57,10 +57,26 @@ export function Header() {
     return false;
   };
 
+  // Logo and brand click handler to return to Hero section at top of website
+  const handleLogoClick = (e) => {
+    setMobileMenuOpen(false);
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (location.hash) {
+        window.history.pushState(null, '', '/');
+      }
+    } else {
+      e.preventDefault();
+      navigate('/');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const isHomeActive = location.pathname === '/';
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-2xs">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-2xs">
       {/* Centered-Logo Navbar Container with Equal Responsive Outer Spacing */}
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 h-20 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-8">
         
@@ -89,6 +105,7 @@ export function Header() {
         <div className="flex items-center justify-center">
           <Link
             to="/"
+            onClick={handleLogoClick}
             aria-label="Sky Cool HVAC Trading LLC Home"
             className="inline-flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 rounded-xl p-1 transition-opacity hover:opacity-95"
           >

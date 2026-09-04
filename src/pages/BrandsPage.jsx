@@ -72,7 +72,7 @@ export function BrandsPage() {
                 {/* Full color image immediately without grayscale filter */}
                 <img
                   src={brand.image}
-                  alt="HVAC brand partner logo"
+                  alt={`HVAC OEM Brand Component Partner - Sky Cool HVAC Trading LLC Dubai`}
                   className="max-w-full max-h-full object-contain filter-none grayscale-0 opacity-100 transform group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />

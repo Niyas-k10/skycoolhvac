@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main Pages -->
+  <!-- Main Core Pages -->
   <url>
     <loc>https://skycoolhvactrading.com/</loc>
     <changefreq>daily</changefreq>
@@ -84,6 +84,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://skycoolhvactrading.com/products/fan-blade</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/blowers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://skycoolhvactrading.com/products/ac-spare-parts</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -115,6 +125,11 @@
   </url>
   <url>
     <loc>https://skycoolhvactrading.com/products/refrigerants</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -322,6 +337,41 @@
   </url>
   <url>
     <loc>https://skycoolhvactrading.com/products/refrigerants/r134a-refrigerant-gas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/refrigerants/honeywell-genetron-r134a-refrigerant-gas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components/duct-accessories</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components/pressure-gauges-thermometers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components/heat-exchangers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components/copper-products</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components/hvac-plumbing-valves</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://skycoolhvactrading.com/products/hvac-components/refrigeration-controllers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

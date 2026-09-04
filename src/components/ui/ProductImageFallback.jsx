@@ -3,6 +3,7 @@ const CATEGORY_IMAGES = {
   'compressors': '/products/Compressor.webp',
   'fan-motors': '/products/Motor.webp',
   'thermostats': '/products/Thermostat.webp',
+  'thermostat': '/products/Thermostat.png',
   'ac-remote-controls': '/products/AC.webp',
   'ac-tools': '/products/Acutator.webp',
   'refrigerants': '/products/Gas.webp',

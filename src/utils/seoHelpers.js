@@ -4,7 +4,7 @@ import { SEO_CONFIG } from '../config/seo.config.js';
 export function getHVACBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
+    "@type": ["LocalBusiness", "HVACBusiness"],
     "@id": `${SEO_CONFIG.baseUrl}/#organization`,
     "name": SITE_CONFIG.name,
     "url": SEO_CONFIG.baseUrl,
@@ -17,7 +17,8 @@ export function getHVACBusinessSchema() {
       "addressLocality": "Dubai",
       "addressRegion": "Dubai",
       "addressCountry": "AE"
-    }
+    },
+    "priceRange": "$$"
   };
 }
 

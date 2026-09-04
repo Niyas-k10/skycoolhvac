@@ -403,7 +403,7 @@ export function BrandCarouselSection() {
                 >
                   <img
                     src={brand.image}
-                    alt="HVAC brand partner logo"
+                    alt={`Genuine HVAC OEM Brand Partner - Sky Cool HVAC Dubai`}
                     className={`
                       max-w-full
                       max-h-full
