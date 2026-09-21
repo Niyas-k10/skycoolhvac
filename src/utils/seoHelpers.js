@@ -39,7 +39,7 @@ export function getProductSchema(product) {
     },
     "offers": {
       "@type": "Offer",
-      "url": `${SEO_CONFIG.baseUrl}/products/${product.categorySlug}/${product.slug}`,
+      "url": `${SEO_CONFIG.baseUrl}/products/${product.categorySlug}`,
       "priceCurrency": "AED",
       "availability": "https://schema.org/InStock",
       "seller": {

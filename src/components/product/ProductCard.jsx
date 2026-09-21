@@ -49,7 +49,7 @@ export function ProductCard({ product }) {
 
           {/* Product Name Title */}
           <h3 className="font-bold text-slate-900 text-base sm:text-lg group-hover:text-sky-600 transition-colors line-clamp-2">
-            <Link to={`/products/${product.categorySlug}/${product.slug}`}>
+            <Link to={`/products/${product.categorySlug}`}>
               {product.name}
             </Link>
           </h3>
@@ -92,7 +92,7 @@ export function ProductCard({ product }) {
               Enquire
             </Button>
             <Link
-              to={`/products/${product.categorySlug}/${product.slug}`}
+              to={`/products/${product.categorySlug}`}
               className="inline-flex items-center justify-center font-semibold rounded-xl text-xs px-3 py-2 text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 transition-colors gap-1"
             >
               <span>View Specs</span>

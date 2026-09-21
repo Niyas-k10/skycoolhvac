@@ -56,7 +56,7 @@ export function GlobalSearchModal({ isOpen, onClose }) {
             results.map((product) => (
               <Link
                 key={product.id}
-                to={`/products/${product.categorySlug}/${product.slug}`}
+                to={`/products/${product.categorySlug}`}
                 onClick={onClose}
                 className="flex items-center gap-4 p-3 rounded-2xl hover:bg-sky-50/80 transition-colors group border border-transparent hover:border-sky-100"
               >

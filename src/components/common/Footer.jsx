@@ -106,9 +106,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link to="/brands" className="text-slate-400 hover:text-[#38BDF8] transition-colors">
+                <a href="/#brands" className="text-slate-400 hover:text-[#38BDF8] transition-colors">
                   Our Brands
-                </Link>
+                </a>
               </li>
               <li>
                 <a href="/#contact" className="text-slate-400 hover:text-[#38BDF8] transition-colors">

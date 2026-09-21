@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AVAILABLE_BRANDS = [
   'b1',
@@ -64,6 +64,10 @@ export function BrandCarouselSection() {
 
   const navigate = useNavigate();
 
+  const handleCarouselClick = () => {
+    navigate('/brands');
+  };
+
   // Step-and-hold interval:
   // 2 seconds hold + 0.5 seconds smooth movement
   useEffect(() => {
@@ -105,12 +109,9 @@ export function BrandCarouselSection() {
     }
   }, [activeIndex]);
 
-  const handleCarouselClick = () => {
-    navigate('/brands');
-  };
-
   return (
     <section
+      id="brands"
       className="
         bg-white
         py-16
@@ -118,6 +119,7 @@ export function BrandCarouselSection() {
         border-b
         border-slate-100
         overflow-hidden
+        scroll-mt-24
       "
     >
       <div
@@ -438,31 +440,27 @@ export function BrandCarouselSection() {
               CAROUSEL HINT
           ========================================= */}
           <div className="text-center pt-2">
-            <span
+            <Link
+              to="/brands"
+              onClick={(e) => e.stopPropagation()}
               className="
                 text-xs
-
                 font-semibold
-
-                text-slate-400
-
+                text-slate-500
                 group-hover:text-[#2563EB]
-
                 transition-colors
-
                 inline-flex
                 items-center
                 gap-1
               "
             >
               <span>
-                Click here to view all brand partners
+                View All Brand Partners
               </span>
-
-              {/* <span>
+              <span>
                 →
-              </span> */}
-            </span>
+              </span>
+            </Link>
           </div>
         </div>
 

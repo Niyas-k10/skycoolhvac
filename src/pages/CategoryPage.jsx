@@ -3,21 +3,22 @@ import { ArrowLeft } from 'lucide-react';
 import { CATEGORIES } from '../data/categories.js';
 import { SEOHead } from '../components/common/SEOHead.jsx';
 import { getBreadcrumbSchema } from '../utils/seoHelpers.js';
+import { NotFoundPage } from './NotFoundPage.jsx';
 
-const CATEGORY_ALIAS_MAP = {
-  'ac-spare-parts': 'ac',
-  'actuators': 'actuator',
-  'capacitors': 'capacitor',
-  'coils': 'coil',
-  'compressors': 'compressor',
-  'refrigerants': 'gas',
-  'motors': 'motor',
-  'fan-motors': 'motor',
-  'thermostats': 'thermostat',
-  'ac-remote-controls': 'ac',
-  'ac-tools': 'copper',
-  'hvac-components': 'duct-materials'
-};
+const APPROVED_CATEGORY_SLUGS = new Set([
+  'ac',
+  'duct-materials',
+  'compressor',
+  'motor',
+  'gas',
+  'capacitor',
+  'coil',
+  'copper',
+  'thermostat',
+  'actuator',
+  'fan-blade',
+  'blowers'
+]);
 
 const CATEGORY_SEO = {
   ac: {
@@ -127,20 +128,15 @@ function ProductCard({ product, categoryName }) {
 
 export function CategoryPage() {
   const { categorySlug } = useParams();
-  const targetSlug = CATEGORY_ALIAS_MAP[categorySlug] || categorySlug;
-  const category = CATEGORIES.find((c) => c.slug === targetSlug);
+
+  if (!APPROVED_CATEGORY_SLUGS.has(categorySlug)) {
+    return <NotFoundPage />;
+  }
+
+  const category = CATEGORIES.find((c) => c.slug === categorySlug);
 
   if (!category) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center space-y-4">
-        <h1 className="text-3xl font-bold text-slate-900">Category Not Found</h1>
-        <p className="text-slate-600">The requested product category does not exist in our catalogue.</p>
-        <Link to="/products" className="inline-flex items-center gap-2 text-[#2563EB] font-bold">
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Products</span>
-        </Link>
-      </div>
-    );
+    return <NotFoundPage />;
   }
 
   const categoryMeta = CATEGORY_SEO[categorySlug] || CATEGORY_SEO[category.slug] || {

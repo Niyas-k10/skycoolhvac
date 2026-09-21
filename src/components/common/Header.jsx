@@ -31,28 +31,34 @@ export function Header() {
     }
 
     if (item.type === 'anchor') {
+      e.preventDefault();
       if (location.pathname === '/') {
-        e.preventDefault();
         const element = document.getElementById(item.targetId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
-          window.history.pushState(null, '', item.path);
         }
+        navigate(item.path);
       } else {
-        // From /about or /brands, navigate to homepage anchor /#products or /#contact
-        e.preventDefault();
-        navigate(`/${item.path}`);
+        navigate(item.path);
       }
     }
   };
 
   // Active route & section checker
   const isItemActive = (item) => {
-    if (item.type === 'route') {
-      return location.pathname === item.path;
+    if (item.label === 'About') {
+      return location.pathname === '/about';
     }
-    if (item.type === 'anchor') {
-      return location.pathname === '/' && location.hash === `#${item.targetId}`;
+    if (item.label === 'Brands') {
+      return location.pathname === '/brands';
+    }
+    if (item.label === 'Products') {
+      if (location.pathname.startsWith('/products')) return true;
+      if (location.pathname === '/' && location.hash === '#products') return true;
+      return false;
+    }
+    if (item.label === 'Contact') {
+      return location.pathname === '/' && location.hash === '#contact';
     }
     return false;
   };
