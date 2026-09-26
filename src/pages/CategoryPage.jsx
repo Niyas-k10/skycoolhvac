@@ -144,7 +144,7 @@ export function CategoryPage() {
     description: `Explore ${category.name} components supplied by Sky Cool HVAC Trading LLC in Dubai and across the UAE. ${category.shortDescription}`
   };
 
-  const canonicalCategoryUrl = `https://skycoolhvactrading.com/products/${categorySlug}`;
+  const canonicalCategoryUrl = `https://www.skycoolhvactrading.com/products/${categorySlug}`;
 
   const breadcrumbs = [
     { name: 'Products Catalogue', url: '/products' },

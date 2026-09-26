@@ -8,7 +8,7 @@ export const SITE_URL = (
   import.meta?.env?.VITE_SITE_URL
 )
   ? import.meta.env.VITE_SITE_URL.replace(/\/$/, '')
-  : 'https://skycoolhvactrading.com';
+  : 'https://www.skycoolhvactrading.com';
 
 export const SEO_CONFIG = {
   baseUrl: SITE_URL,
